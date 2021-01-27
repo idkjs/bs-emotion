@@ -19,8 +19,11 @@
     "test": "exit 0"
   },
   "dependencies": {
-    "@ahrefs/bs-emotion": "2.0.0",
     "@ahrefs/bs-emotion-ppx": "2.0.0",
+    "@babel/core": "^7.0.0",
+    "@emotion/css": "^11.1.3",
+    "@emotion/react": "^11.1.4",
+    "@minima.app/re-css": "1.0.1",
     "bs-platform": "^7.0.1",
     "parcel-bundler": "1.12.4",
     "re-classnames": "4.1.0",
