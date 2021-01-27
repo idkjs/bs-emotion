@@ -725,12 +725,12 @@ let columnDense = `columnDense;
 
 /* ===== 👩‍🎤 Emotion bindings ===== */
 
-[@bs.module "@emotion/react"]
+[@bs.module "@emotion/css"]
 external make: (Js.nullable(string), Js.Dict.t(string)) => string = "css";
 let css = (~extend: option(string)=?, declarations) =>
   declarations->Declarations.toDict->make(extend->Js.Nullable.fromOption, _);
 
-[@bs.module "@emotion/react"]
+[@bs.module "@emotion/css"]
 external injectGlobal: Js.Dict.t(Js.Dict.t(string)) => unit = "injectGlobal";
 let global = (selector, declarations) => {
   let css = Js.Dict.empty();
@@ -738,7 +738,7 @@ let global = (selector, declarations) => {
   css->injectGlobal;
 };
 
-[@bs.module "@emotion/react"]
+[@bs.module "@emotion/css"]
 external makeKeyframes: Js.Dict.t(Js.Dict.t(string)) => string = "keyframes";
 let keyframes = (frames: list((int, list(declaration)))) =>
   frames

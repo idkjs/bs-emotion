@@ -2498,13 +2498,13 @@ let spaceEvenly: [> | `spaceEvenly];
 let areas: list(string) => [> | `areas(list(string))];
 let rowDense: [> | `rowDense];
 let columnDense: [> | `columnDense];
-[@bs.module "@emotion/react"]
+[@bs.module "@emotion/css"]
 external make: (Js.nullable(string), Js.Dict.t(string)) => string = "css";
 let css: (~extend: string=?, list(declaration)) => string;
-[@bs.module "@emotion/react"]
+[@bs.module "@emotion/css"]
 external injectGlobal: Js.Dict.t(Js.Dict.t(string)) => unit = "injectGlobal";
 let global: (Js.Dict.key, list(declaration)) => unit;
-[@bs.module "@emotion/react"]
+[@bs.module "@emotion/css"]
 external makeKeyframes: Js.Dict.t(Js.Dict.t(string)) => string = "keyframes";
 let keyframes: list((int, list(declaration))) => string;
 let fontFace: list(declaration) => unit;
