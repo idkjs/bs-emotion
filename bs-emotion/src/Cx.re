@@ -1,2 +1,2 @@
-[@bs.module "@emotion/react"] [@bs.splice]
+[@bs.module "@emotion/css"] [@bs.splice]
 external merge: array(string) => string = "cx";
